@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="TH02.css">
+    <title> TH02-21068121-Trần Yến Nhi</title>
+    <meta charset="UTF-8">
+    <meta name="Home description" content="TH02">
+    <meta name="keywords" content="21068121">
+    <meta name="author" content="Trần Yến Nhi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <br>    
+
+</head>
+<body>
+<!--Bai1-->
+    <title>Giải phương trình bậc 1</title>
+    <h1>Giải phương trình bậc 1</h1>
+    <div class="container">
+        <div class="input-group">
+            <label for="input-a">Nhập hệ số a:</label>
+            <input type="number" id="input-a">
+        </div>
+        <div class="input-group">
+            <label for="input-b">Nhập hệ số b:</label>
+            <input type="number" id="input-b">
+        </div>
+        <button class="btn" onclick="giaiPhuongTrinh()">Giải phương trình tại đây</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function giaiPhuongTrinh() {
+            var a = parseFloat(document.getElementById('input-a').value);
+            var b = parseFloat(document.getElementById('input-b').value);
+            var resultEl = document.getElementById('result');
+
+            if (a === 0) {
+                if (b === 0) {
+                    resultEl.innerHTML = "Phương trình vô số nghiệm";
+                } else {
+                    resultEl.innerHTML = "Phương trình vô nghiệm";
+                }
+            } else {
+                var x = -b / a;
+                resultEl.innerHTML = "Nghiệm của phương trình là x = " + x;
+            }
+        }
+    </script>
+    
+<!-- Bai2-->
+    <title>Đóng góp ý kiến sản phẩm</title>
+        <div class="note">        
+            <h1 style="color: blueviolet; font-size: 30px;">Đóng góp ý kiến sản phẩm</h1>
+            <p> Góp ý của bạn sẽ được chúng tôi xem xét, vui lòng nhập Tiếng Việt có dấu</p>
+            <p>Các ý kiến đóng nên viết chi tiết rõ ràng, kèm theo các minh chứng xác thực thời gian và địa điểm <i>(nếu có)</i></p>
+        </div>
+        <div class="bai2">
+        <div class="container2">
+            <form action="" method="post">
+                <div class="input-group2">
+                    <label for="input-name"></label>
+                    <input type="text" placeholder="Tên của bạn" id="input-name" required>
+                </div>
+                <div class="input-group2">
+                    <label for="input-phone"></label>
+                    <input type="tel" placeholder="Số điện thoại" id="input-phone" required>
+                </div>
+                <div class="input-group2">
+                    <label for="input-email"></label>
+                    <input type="email" placeholder="Email" id="input-email" required>
+                </div>
+                <div class="input-group2">
+                    <label for="input-card"></label>
+                    <input type="text" placeholder="Mã thẻ" id="input-card" required>
+                </div>
+                <div class="input-group2">
+                    <label for="input-invoice"></label>
+                    <input type="text" placeholder="Mã hoá đơn" id="input-invoice">
+                </div>
+                <div class="input-group2">
+                    <label for="input-customer-type"></label>
+                    <select id="input-customer-type" required>
+                        <option class="select">Chọn loại khách hàng</option>
+                        <option value="vip">VIP</option>
+                        <option value="regular">Regular</option>
+                        <option value="new">New</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div>
+            <div class="input-group2">
+            <label for="input-description"></label>
+            <textarea placeholder="Nhập chi tiết mô tả" id="input-description" required></textarea>
+        </div>
+        <button class="btn2" type="submit">Gửi ý kiến</button>
+        </div>
+    </div>  
+    
+<!-- Bai3-->    
+    <title>Liên Hệ</title>
+    <h2>LIÊN HỆ</h2>
+        <div class="wrap">
+            <div>
+                <p class="inf"><strong>Thông tin</strong></p>
+                <p><img class="pic3" src="location.jpg"/> 12 Nguyễn Văn Bảo, Gò Vấp, HCM</p>
+                <p><img class="pic3" src="mail.jpg"/> abc@gmail.com</p>
+                <p><img class="pic3" src="phone.jpg"/> 0987654321</p>
+           
+            </div>
+            <div>
+                <p class="contact">Hãy liên lạc với chúng tôi bất cứ khi nào!!!</p>
+                <form style="margin: 30px">
+                    <div>
+                        <label for="name"></label>
+                        <input tyle="text" id="name" placeholder="Họ và tên">
+                    </div>
+                    <div>
+                        <label for="email"></label>
+                        <input tyle="email" id="email" placeholder="Địa chỉ e-mail">
+                    </div>
+                    <div>
+                        <label for="tieude"></label>
+                        <input tyle="text" id="tieude" placeholder="Tiêu đề bài viết">
+                    </div>
+                    <div>
+                        <label for="nd"></label>
+                        <textarea placeholder="Nội dung cần gửi" id="nd" required></textarea>
+                    </div>
+                    <div>        
+                        <button class="btn3" onclick="guitinnhan">Gửi tin nhắn</button>
+                    </div>
+                </form>
+            </div>
+            
+        </div> 
+
+<!-- Bai4-->
+    <title>BMI</title>
+    <h2 class="tieude2">BMI</h2>
+    <form class="cal">
+        <div >
+            <label class="bai4" for="kg">Nhập cân nặng:</label>
+            <input type="number" id="weight" placeholder="kg">
+        </div>
+        <div >
+            <label class="bai4" for="cm">Nhập chiều cao:</label>
+            <input type="number" id="height" placeholder="cm">
+        </div>
+        <div >
+            <label class="bai4" for="input-customer-type"></label>
+            <select id="loaituoi" required>
+                <option class="select">Chọn loại tuổi</option>
+                <option value="vip">Trung niên</option>
+                <option value="regular">Trung niên, Già lớn tuổi</option>
+                <option value="new">Già, lớn tuổi</option>
+            </select>
+        </div>
+        <div>
+            <button class="btn4" onclick="BMI()">Tính BMI</button>
+            <div id="bmi-output"></div>
+            <div id="total"></div>
+        </div>
+    </form>
+
+    <script>
+        function BMI() {
+        let weight = document.getElementById('weight').value
+        let height= document.getElementById('height').value /100
+        let bmi = (weight / (height * height))
+        
+        document.getElementById('bmi-output').innerHTML=  bmi.toFixed(2)
+
+        if(bmi < 18.5){
+            document.getElementById('total').innerHTML =  'Tình trạng : Dưới chuẩn '
+        } else if (bmi >= 18.5 && bmi <= 24.9 ){
+            document.getElementById('total').innerHTML =  'Tình trạng : Bình thường '
+        } else if (bmi >= 25 && bmi <= 29.9){
+            document.getElementById('total').innerHTML =  'Tình trạng : Thừa cân '
+        } else if(bmi>=30 && bmi<34.9){
+            document.getElementById('total').innerHTML =  'Tình trạng : Béo phì cấp độ 1, nên đi khám định kì'
+        } else if(bmi>=35&&bmi<=39.9){
+            document.getElementById('total').innerHTML =  'Tình trạng : Béo phì cấp độ 2, nhớ tập thể dục thường xuyên' 
+        } else if(bmi>=40){
+            document.getElementById('total').innerHTML =  'Tình trạng : Béo phì cấp độ 3, hạn chế ăn mỡ động vật' 
+
+        }
+        }
+    </script>
+
+<!-- Bài 5 -->
+<div>
+    
+    <div class="form-login">
+        <h1 class="hd-5">Login</h1>
+        <form class="login-form" name="form5">
+            <div class="input-group2">
+                <input  class="type-ip" type="text" placeholder="User" name="username" required>
+                <label  for="input-user"></label>
+            </div>
+            <div class="input-group2">
+                <input class="type-ip"  type="password" placeholder="Password" name="pass"  required>
+                <label  for="input-password"></label>
+            <script>
+                function login(){
+                var matkhau = document.form5.pass.value;
+                var tendangnhap = document.form5.username.value;
+
+                if(tendangnhap==""&& matkhau == ""){
+                    alert('Thông tin đăng nhập không để trống');
+                    return;
+                }
+               var co = confirm('Bạn muốn hiện mật khẩu' );
+                    if(co=1){
+                        confirm('mật khẩu:\n' + matkhau);
+                    }    
+                    }
+            </script>
+
+            <div>
+                <label for="">Lưu đăng nhập </label>
+                <input type="checkbox" name="" id="">
+            </div>
+            <button id="btn5" onclick="login()" type="submit">LOGIN </button>
+        </form>
+    </div>
+</div>
+
+<!-- Bài 6 -->
+<div class="bai6">
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="user name ">
+                <i class="ti-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="password ">
+                <i class="ti-lock"></i>
+            </div>
+            <div class="remember-forgot">
+                <label for=""> <input type="checkbox" name="" id=""> Duy trì đăng nhập </label>
+                <a href="#">Quên mật khẩu</a>
+            </div>
+            <button class="btn-login" type="submit">Login</button>
+            <div class="register-link">
+                <p> Đã có tài khoản? <a href="#">Đăng kí</a></p>
+                
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
